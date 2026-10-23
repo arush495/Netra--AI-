@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netra AI - Vision Companion</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>👁️ Netra AI</h1>
+      <p class="tagline">Voice & Vision Companion for the Blind | Gemma 4</p>
+    </header>
+
+    <!-- Language Selector -->
+    <div class="lang-switch">
+      <label><input type="radio" name="lang" value="Hindi" checked> हिन्दी (Hindi)</label>
+      <label><input type="radio" name="lang" value="English"> English</label>
+    </div>
+
+    <!-- Mode Selector Buttons -->
+    <div class="modes-grid">
+      <button class="mode-btn active" data-mode="currency">💵 Note / Currency</button>
+      <button class="mode-btn" data-mode="medicine">💊 Dawai / Medicine</button>
+      <button class="mode-btn" data-mode="food">🟢 Khana / Veg-NonVeg</button>
+      <button class="mode-btn" data-mode="scene">🚶 Saamne Kya Hai?</button>
+    </div>
+
+    <!-- Live Camera Box -->
+    <div class="camera-card">
+      <video id="webcam" autoplay playsinline></video>
+      <canvas id="snapshot" style="display: none;"></canvas>
+      <div id="camera-loading">Camera load ho raha hai...</div>
+    </div>
+
+    <!-- Big Trigger Button -->
+    <button id="scan-btn" class="scan-btn">📸 SCAN & BOLO (TAP HERE)</button>
+
+    <!-- Output Box -->
+    <div class="result-card">
+      <div class="result-header">
+        <span>📢 Netra Aawaz:</span>
+        <button id="replay-btn" class="icon-btn" style="display: none;">🔊 Dobara Suno</button>
+      </div>
+      <p id="output-text">Saamne kisi cheez par camera karein aur upar button dabayein.</p>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
